@@ -62,6 +62,12 @@ a {
   color: var(--text);
   text-decoration: none;
 }
+input:hover {
+  transform:scale(1.1);
+    transition-duration:200ms;
+    transition-timing-function:ease-in-out;
+    transition-delay:0ms;
+}
 
 /** global classes styling **/
 
@@ -103,8 +109,27 @@ section {
     min-height: 100vh;
     padding-top: 15vh;
     color: var(--text);
-    
-    
+       
+}
+
+.cart {
+  position: relative;
+  background-color: #fff;
+  color: #212529;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.cartAmount {
+  position: absolute;
+  top: -15px;
+  right: -10px;
+  font-size: 16px;
+  background-color: red;
+  color: white;
+  padding: 3px;
+  border-radius: 3px;
 }
 
 @media (max-width: 600px) {
@@ -294,7 +319,7 @@ nav > ul {
   }
   .product-title {
     font-size: 1.2rem;
-    padding: 2rem 0.3rem;
+    padding: 1rem 0.3rem;
     text-decoration: dashed;
   }
   .code {
@@ -484,125 +509,3 @@ footer > span {
 
 
 
-/** TABLES XDDDD **/
-
-
-  span[class~="sr-only"] {
-    border: 0 !important;
-    clip: rect(1px, 1px, 1px, 1px) !important;
-    clip-path: inset(50%) !important;
-    -webkit-clip-path: inset(50%) !important;
-    height: 1px !important;
-    width: 1px !important;
-    position: absolute !important;
-    overflow: hidden !important;
-    white-space: nowrap !important;
-    padding: 0 !important;
-    margin: -1px !important;
-  }
-  
-  
-  
-  #years {
-    display: flex;
-    justify-content: flex-end;
-    position: sticky;
-    top: 0;
-    background: #0a0a23;
-    color: #fff;
-    z-index: 9;
-    padding: 0.5rem calc(1.25rem + 2px) 0.5rem 0;
-    margin: 0 -2px;
-
-  }
-  
-  #years span[class] {
-    font-weight: bold;
-    width: 4.5rem;
-    text-align: right;
-  }
-  
-  .table-wrap {
-    padding: 0 0.75rem 1.5rem 0.75rem;
-    width: 80vw;
-  }
-  
-  table {
-    border-collapse: collapse;
-    border: 0;
-    width: 100%;
-    position: relative;
-    margin-top: 3rem;
-  }
-  
-  table caption {
-    color: #356eaf;
-    font-size: 1.3em;
-    font-weight: normal;
-    position: absolute;
-    top: -2.25rem;
-    left: 0.5rem;
-  }
-  
-  tbody td {
-    width: 100vw;
-    min-width: 4rem;
-    max-width: 4rem;
-  }
-  
-  tbody th {
-    width: calc(100% - 12rem);
-  }
-  
-  tr[class="total"] {
-    border-bottom: 4px double #0a0a23;
-    font-weight: bold;
-  }
-  
-  tr[class="total"] th {
-    text-align: left;
-    padding: 0.5rem 0 0.25rem 0.5rem;
-  }
-  
-  tr.total td {
-    text-align: right;
-    padding: 0 0.25rem;
-  }
-  
-  tr.total td:nth-of-type(3) {
-    padding-right: 0.5rem;
-  }
-  
-  tr.total:hover {
-    background-color: #99c9ff;
-  }
-  
-  td.current {
-    font-style: italic;
-  }
-  
-  tr.data {
-    background-image: linear-gradient(to bottom, #dfdfe2 1.845rem, white 1.845rem);
-  }
-  
-  tr.data th {
-    text-align: left;
-    padding-top: 0.3rem;
-    padding-left: 0.5rem;
-  }
-  
-  tr.data th .description {
-    display: block;
-    font-weight: normal;
-    font-style: italic;
-    padding: 1rem 0 0.75rem;
-    margin-right: -13.5rem;
-  }
-  
-  tr.data td {
-    vertical-align: top;
-    padding: 0.3rem 0.25rem 0;
-    text-align: right;
-  }
-  
-  
